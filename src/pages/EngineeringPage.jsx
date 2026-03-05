@@ -109,9 +109,8 @@ const constraints = [
 
 function EngNote({ note, index }) {
   const [open, setOpen] = useState(false)
-  const rdClass = index === 0 ? '' : index === 1 ? ' rd1' : index === 2 ? ' rd2' : ' rd3'
   return (
-    <div className={`eng-note glass reveal${rdClass}${open ? ' open' : ''}`}>
+    <div className={`eng-note glass${open ? ' open' : ''}`}>
       <div
         className="eng-note-header"
         role="button" tabIndex={0}
