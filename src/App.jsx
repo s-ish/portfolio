@@ -11,7 +11,6 @@ import NotesPage from './pages/NotesPage'
 import ContactPage from './pages/ContactPage'
 import SyntheXPage from './pages/SyntheXPage'
 import { useParticles } from './hooks/useParticles'
-import { useSmoothScroll } from './hooks/useSmoothScroll'
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -34,7 +33,6 @@ export default function App() {
   const [animating, setAnimating] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const canvasRef = useParticles(reducedMotion)
-  useSmoothScroll()
 
   const navigate = (key) => {
     if (!PAGES[key] || key === currentPage) return
