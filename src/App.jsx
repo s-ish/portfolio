@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import Loader from './components/Loader'
 import Nav from './components/Nav'
 import HomePage from './pages/HomePage'
@@ -11,6 +11,7 @@ import NotesPage from './pages/NotesPage'
 import ContactPage from './pages/ContactPage'
 import SyntheXPage from './pages/SyntheXPage'
 import { useParticles } from './hooks/useParticles'
+import { useSmoothScroll } from './hooks/useSmoothScroll'
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -33,13 +34,14 @@ export default function App() {
   const [animating, setAnimating] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const canvasRef = useParticles(reducedMotion)
+  useSmoothScroll()
 
   const navigate = (key) => {
     if (!PAGES[key] || key === currentPage) return
     setAnimating(true)
     setCurrentPage(key)
     try { window.scrollTo({ top: 0, behavior: 'instant' }) } catch { window.scrollTo(0, 0) }
-    setTimeout(() => setAnimating(false), 400)
+    setTimeout(() => setAnimating(false), 500)
   }
 
   const PageComponent = PAGES[currentPage]
@@ -49,11 +51,8 @@ export default function App() {
       <a href="#main-content" className="skip-link">Skip to content</a>
       <div id="space-bg" aria-hidden="true"></div>
       <canvas id="particles" ref={canvasRef} aria-hidden="true"></canvas>
-
       {!loaded && <Loader onDone={() => setLoaded(true)} />}
-
       <Nav currentPage={currentPage} onNavigate={navigate} />
-
       <main id="main-content">
         <div className={animating ? 'animating' : ''} key={currentPage}>
           <PageComponent onNavigate={navigate} />
