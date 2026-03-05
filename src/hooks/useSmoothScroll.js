@@ -5,7 +5,7 @@ export function useSmoothScroll() {
     let current = window.scrollY
     let target = window.scrollY
     let rafId = null
-    const ease = 0.15 // lower = springier, higher = snappier
+    const ease = 0.5 // lower = springier, higher = snappier
 
     function update() {
       current += (target - current) * ease
