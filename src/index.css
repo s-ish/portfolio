@@ -19,12 +19,13 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; overscroll-behavior: none; }
+html { scroll-behavior: smooth; }
 body {
   background: var(--bg); color: var(--text); font-family: var(--sans);
   overflow-x: hidden; line-height: 1.6;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-  overscroll-behavior: none; -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: auto; -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 ::-webkit-scrollbar { display: none; }
 * { scrollbar-width: none; -ms-overflow-style: none; }
