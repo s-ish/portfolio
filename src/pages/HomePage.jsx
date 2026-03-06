@@ -13,7 +13,7 @@ export default function HomePage({ onNavigate }) {
     if (!el) return
     if (reducedMotion) { el.textContent = 'backend systems engineer'; return }
 
-    const phrases = ['whoami', 'backend systems engineer', 'building at the infrastructure layer', 'event-driven · transactional · fault-tolerant']
+    const phrases = ['whoami', 'backend systems engineer', 'building at the infrastructure layer', 'event-driven · transactional · fault-tolerant', 'ambitious']
     let pi = 0, ci = 0, del = false
 
     function type() {
@@ -84,7 +84,7 @@ export default function HomePage({ onNavigate }) {
               </div>
               <div className="stats-section-label">Activity</div>
               <div className="anchor-grid">
-                <div className="anchor-item"><div className="anchor-val">4</div><div className="anchor-label">Production systems</div></div>
+                <div className="anchor-item"><div className="anchor-val">5</div><div className="anchor-label">Production systems</div></div>
                 <div className="anchor-item"><div className="anchor-val">~4.5 years</div><div className="anchor-label">Writing software</div></div>
                 <div className="anchor-item"><div className="anchor-val">Node.js</div><div className="anchor-label">Primary runtime</div></div>
                 <div className="anchor-item"><div className="anchor-val">Full Stack</div><div className="anchor-label">Focus area</div></div>
