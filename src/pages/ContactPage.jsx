@@ -33,7 +33,7 @@ export default function ContactPage() {
                   <path d="M2 7l8.586 6.293a2.5 2.5 0 0 0 2.828 0L22 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </div>
-              <div><div className="ci-type">Email</div><div className="ci-val">sish@isnotaskid.ong</div></div>
+              <div><div className="ci-type">Email</div><div className="ci-val">sish@is.notaskid.ong</div></div>
             </a>
           </div>
           <div className="avail-card glass reveal rd1">
