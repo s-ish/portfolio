@@ -13,7 +13,7 @@ export default function HomePage({ onNavigate }) {
     if (!el) return
     if (reducedMotion) { el.textContent = 'backend systems engineer'; return }
 
-    const phrases = ['whoami', 'backend systems engineer', 'building at the infrastructure layer', 'event-driven · transactional · fault-tolerant', 'ambitious']
+    const phrases = ['whoami', 'backend systems engineer', 'building at the infrastructure layer', 'transactional & fault-tolerant', 'ambitious', 'I think I am Napoleon']
     let pi = 0, ci = 0, del = false
 
     function type() {
@@ -63,7 +63,7 @@ export default function HomePage({ onNavigate }) {
         </div>
         <div className="hero-right">
           <div className="profile-photo-wrap" aria-label="Profile photo">
-            <img src="https://files.catbox.moe/ct6xs8.jpg" alt="Sish" referrerPolicy="no-referrer" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top',display:'block'}} />
+            <img src="https://files.catbox.moe/4g6jzp.jpg" alt="Sish" referrerPolicy="no-referrer" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top',display:'block'}} />
           </div>
         </div>
         <div className="scroll-hint" aria-hidden="true"><div className="scroll-line"></div>scroll</div>
