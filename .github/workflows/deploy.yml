@@ -46,18 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-```
-
----
-
-## Step 3 — Add `CNAME` file to `/public`
-
-Vite copies everything in `/public` directly to `/dist` at build time:
-```
-public/
-└── CNAME        ← create this file
-```
-
-Contents of `CNAME` (just one line, no quotes):
-```
-meth.oops.wtf
